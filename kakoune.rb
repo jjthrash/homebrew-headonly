@@ -7,7 +7,7 @@ class Kakoune < Formula
   depends_on 'boost'
 
   def install
-    Dir.chdir('src') do
+    cd 'src' do
       system "make", "install", "PREFIX=#{prefix}"
     end
   end
